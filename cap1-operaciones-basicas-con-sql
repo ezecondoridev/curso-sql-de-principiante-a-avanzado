@@ -1,0 +1,67 @@
+USE [clasesql]
+GO
+
+SELECT [ID_ENTIDAD]
+      ,[ENTIDAD]
+      ,[DISTRITO_FEDERAL] AS DISTRITO_ELECTORAL
+      ,[Votos]
+      ,[Fecha_Publicación]
+  FROM [dbo].[votos]
+
+  WHERE votos < 150000
+
+SELECT [ID_ENTIDAD]
+      ,[ENTIDAD]
+      ,[DISTRITO_FEDERAL] AS DISTRITO_ELECTORAL
+      ,[Votos]
+      ,[Fecha_Publicación]
+  FROM [dbo].[votos]
+
+  WHERE ENTIDAD = 'DURANGO'
+
+SELECT [ID_ENTIDAD]
+      ,[ENTIDAD]
+      ,[DISTRITO_FEDERAL] AS DISTRITO_ELECTORAL
+      ,[Votos]
+      ,[Fecha_Publicación]
+  FROM [dbo].[votos]
+
+  WHERE Fecha_Publicación <= '2024-06-04'
+
+SELECT [ID_ENTIDAD]
+      ,[ENTIDAD]
+      ,[DISTRITO_FEDERAL] AS DISTRITO_ELECTORAL
+      ,[Votos]
+      ,[Fecha_Publicación]
+  FROM [dbo].[votos]
+
+  WHERE Fecha_Publicación <= '2024-06-08'
+  AND ENTIDAD = 'TABASCO'
+
+SELECT [ID_ENTIDAD]
+      ,[ENTIDAD]
+      ,[DISTRITO_FEDERAL] AS DISTRITO_ELECTORAL
+      ,[Votos]
+      ,[Fecha_Publicación]
+  FROM [dbo].[votos]
+
+  WHERE Fecha_Publicación <= '2024-06-04'
+  OR ENTIDAD = 'TABASCO'
+
+SELECT [ID_ENTIDAD]
+      ,[ENTIDAD]
+      ,[DISTRITO_FEDERAL] AS DISTRITO_ELECTORAL
+      ,[Votos]
+      ,[Fecha_Publicación]
+  FROM [dbo].[votos]
+
+  WHERE ENTIDAD IN ('SINALOA', 'HIDALGO', 'COLIMA')
+
+GO
+
+
+SELECT *
+FROM dbo.votos
+
+SELECT ID_ENTIDAD, ENTIDAD, Votos
+FROM dbo.votos
